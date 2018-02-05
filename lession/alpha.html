@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>cancas</title>
+        <style>
+        *{margin: 0;padding: 0}
+        canvas{border: 2px solid #a4e2f9;margin: 30px auto;display: block}
+        </style>
+    </head>
+    <body>
+        <canvas width="500" height="300" id="myCav"></canvas>
+        <script>
+            var c = document.querySelector('#myCav');
+            var ctx = c.getContext('2d');
+            ctx.fillStyle = "red";
+            ctx.fillRect(100, 100, 75, 75);
+            ctx.fillStyle = 'green';
+            ctx.fillRect(175, 100, 75, 75);
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(100,175, 75, 75);
+            ctx.fillStyle = 'orange';
+            ctx.fillRect(175, 175, 75, 75);
+            
+            ctx.globalAlpha = 0.2;
+            ctx.fillStyle = `rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`;
+            for(var i=0; i<=9; i++){
+                    var a = Math.floor(255/10)
+                    ctx.beginPath();
+                    ctx.arc(175, 175, i*7.5, 0, 2*Math.PI);
+                    ctx.fill();
+            }
+        </script>
+    </body>
+</html>

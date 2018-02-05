@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>cancas</title>
+        <style>
+        *{margin: 0;padding: 0}
+        canvas{border: 2px solid #a4e2f9;margin: 30px auto;display: block}
+        </style>
+    </head>
+    <body>
+        <canvas width="500" height="300" id="myCav"></canvas>
+        <script>
+            var c = document.querySelector('#myCav');
+            var ctx = c.getContext('2d');
+
+            var rect = new Path2D();
+            rect.rect(50, 50, 30, 30);
+            var arc = new Path2D();
+            arc.moveTo(300, 100);
+            arc.arc(250, 100, 50, 0, 2*Math.PI, true);
+            
+            ctx.stroke(rect);   //绘制块 （会自动闭合路径）
+            ctx.fill(arc);
+        </script>
+    </body>
+</html>

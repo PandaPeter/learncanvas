@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>cancas</title>
+        <style>
+        *{margin: 0;padding: 0}
+        canvas{border: 2px solid #a4e2f9;margin: 30px auto;display: block}
+        </style>
+    </head>
+    <body>
+        <canvas width="500" height="300" id="myCav"></canvas>
+        <script>
+            var c = document.querySelector('#myCav');
+            var ctx = c.getContext('2d');
+            ctx.beginPath();//开始绘画
+            ctx.moveTo(100, 100);
+            ctx.lineTo(200, 100);
+            ctx.lineTo(200, 200);
+            //ctx.closePath();//闭合路径
+
+            ctx.moveTo(300, 100);
+            ctx.lineTo(300, 200);
+            ctx.lineTo(400, 200);
+            ctx.closePath();
+            ctx.stroke();//绘制轮廓
+
+            ctx.fill();   //绘制块 （会自动闭合路径）
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>cancas</title>
+        <style>
+        *{margin: 0;padding: 0}
+        canvas{border: 2px solid #a4e2f9;margin: 30px auto;display: block}
+        </style>
+    </head>
+    <body>
+        <canvas width="500" height="300" id="myCav"></canvas>
+        <script>
+            var c = document.querySelector('#myCav');
+            var ctx = c.getContext('2d');
+            ctx.beginPath();//开始绘画
+            ctx.moveTo(100,130);
+            ctx.bezierCurveTo(100, 50, 170, 50, 200, 100);
+            ctx.bezierCurveTo(230, 50, 300, 50, 300, 130);
+            ctx.bezierCurveTo(300,140,300,210,200,250);
+            ctx.bezierCurveTo(100,200,100,140,100,130);
+
+            ctx.stroke();   //绘制块 （会自动闭合路径）
+        </script>
+    </body>
+</html>

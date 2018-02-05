@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>cancas</title>
+        <style>
+        *{margin: 0;padding: 0}
+        canvas{border: 2px solid #a4e2f9;margin: 30px auto;display: block}
+        .myCav2{
+            width: 100px;
+            height: 300px;
+
+        }
+        </style>
+    </head>
+    <body>
+        <canvas width="500" height="300" id="myCav"></canvas>
+        <canvas class="myCav2"></canvas>
+        <script>
+            var c = document.querySelector('#myCav');
+            var ctx = c.getContext('2d');
+            ctx.fillStyle = 'red';
+            ctx.fillRect(50, 50, 200, 200);
+            ctx.clearRect(50, 50, 100, 100);
+            ctx.strokeStyle = 'red';
+            ctx.strokeRect(51, 51, 100, 100);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>cancas</title>
+        <style>
+        *{margin: 0;padding: 0}
+        canvas{border: 2px solid #a4e2f9;margin: 30px auto;display: block}
+        </style>
+    </head>
+    <body>
+        <canvas width="500" height="300" id="myCav"></canvas>
+        <script>
+            var c = document.querySelector('#myCav');
+            var ctx = c.getContext('2d');
+            var pi = Math.PI;
+            //alert(pi);
+            ctx.beginPath();
+            ctx.arc(250, 150, 100, 0, pi*2, true);
+            ctx.moveTo(170, 150);
+            ctx.arc(250, 150, 80, pi, pi*2, true);
+            ctx.moveTo(300, 100);
+            ctx.arc(290, 100, 10, 0, pi*2, true);
+            ctx.moveTo(220, 100);
+            ctx.arc(210, 100, 10, 0, pi*2, true);
+            ctx.stroke();
+            
+        </script>
+    </body>
+</html>
