@@ -13,17 +13,17 @@
         <script>
             var c = document.querySelector('#myCav');
             var ctx = c.getContext('2d');
-            var lineargradient = ctx.createLinearGradient(0,50,0,140);
+            var lineargradient = ctx.createLinearGradient(0,0,0,140);
             lineargradient.addColorStop(0,'#00ABEB');
             lineargradient.addColorStop(0.5, "#fff");
             lineargradient.addColorStop(0.5, "green");
             lineargradient.addColorStop(1,'#fff');
 
-        ctx.fillStyle = lineargradient;
-        //ctx.strokeStyle = lineargradient2;
+            ctx.fillStyle = lineargradient;
+            //ctx.strokeStyle = lineargradient2;
 
-        ctx.fillRect(10,10,130,130);
-        //ctx.strokeRect(50,50,50,50);
+            ctx.fillRect(10,10,130,130);
+            //ctx.strokeRect(50,50,50,50);
         </script>
     </body>
 </html>
